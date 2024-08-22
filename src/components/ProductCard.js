@@ -18,8 +18,7 @@ function ProductCard({ id, title, price, description, category, image }) {
 
     return (
         <div className='relative flex flex-col m-5 bg-white z-30 p-10'>
-<<<<<<< HEAD
-            { isClient &&<p className='absolute top-2 right-2 text-xs italic  '>{category}</p>}
+        { isClient &&<p className='absolute top-2 right-2 text-xs italic  '>{category}</p>}
            <div className='h-52 flex justify-center'>
             <img
             src={image} 
@@ -28,15 +27,7 @@ function ProductCard({ id, title, price, description, category, image }) {
             />
             </div> 
             <h4 className='my-3 line-clamp-1 '>{title}</h4>
-=======
             <p className='absolute top-2 right-2 text-xs italic  '>{category}</p>
-            <img
-            src={image} 
-            alt='ProductImage'
-            className='h-52'
-            />
-            <h4 className='my-3'>{title}</h4>
->>>>>>> a321cf85289f8c689ed4114cb79a45ecfded72a0
 
             {isClient && <div className='flex'>
                 {Array(rating).fill().map((_, i) => {
@@ -54,11 +45,7 @@ function ProductCard({ id, title, price, description, category, image }) {
 
             {isClient && hasPrime && (
                 <div className='flex items-center space-x-2 -mt-5'>
-<<<<<<< HEAD
                     <img className='w-14' src='https://www.datocms-assets.com/22642/1699350082-18.png?h=1000&w=1000' alt='prime Tag'></img>
-=======
-                    <img className='w-12' src='https://www.datocms-assets.com/22642/1699350082-18.png?h=1000&w=1000' alt='prime Tag'></img>
->>>>>>> a321cf85289f8c689ed4114cb79a45ecfded72a0
                     <p className='text-xs text-gray-500'>FREE Next-day Delivery</p>
                 </div>
             )}
