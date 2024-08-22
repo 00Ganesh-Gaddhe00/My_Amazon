@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { StarIcon } from '@heroicons/react/solid';
 import Currency from 'react-currency-formatter';
+import { useDispatch } from 'react-redux';
+import { addToBasket } from '../slices/basketSlice';
 
 function ProductCard({ id, title, price, description, category, image }) {
     const [rating] = useState(
         Math.floor(Math.random() * (5 - 1 + 1) + 1)
     )
-
+    const dispatch = useDispatch()
     const [isClient, setIsClient] = useState(false)
     const [hasPrime] = useState(Math.random() < 0.5)
 
@@ -15,6 +17,19 @@ function ProductCard({ id, title, price, description, category, image }) {
         setIsClient(true)
     })
 
+    const additemsToBasket = ()=>{
+       const product = {
+        id,
+       title, 
+       price, 
+       description, 
+       category, 
+       image,
+       rating,
+       hasPrime 
+       }
+       dispatch(addToBasket(product))
+    }
 
     return (
         <div className='relative flex flex-col m-5 bg-white z-30 p-10'>
@@ -51,7 +66,7 @@ function ProductCard({ id, title, price, description, category, image }) {
             )}
 
 
-         <button className='mt-auto button'>Add to Basket </button>
+         <button onClick={additemsToBasket} className='mt-auto button'>Add to Cart </button>
         </div>
     )
 }
