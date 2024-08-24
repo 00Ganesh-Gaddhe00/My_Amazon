@@ -7,6 +7,7 @@ import { addToBasket } from '../slices/basketSlice';
 import { removeFromBasket } from '../slices/basketSlice';
 
 function CartCard({id, title, price, description, category, image, rating, hasPrime}) {
+
   const dispatch = useDispatch()
   
   const additemstocart = ()=>{
