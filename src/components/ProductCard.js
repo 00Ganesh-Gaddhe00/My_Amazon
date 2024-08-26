@@ -32,7 +32,7 @@ function ProductCard({ id, title, price, description, category, image }) {
     }
 
     return (
-        <div className='relative flex flex-col m-5 bg-white z-30 p-10'>
+        <div className='relative flex flex-col m-4 bg-white z-30 p-8'>
         { isClient &&<p className='absolute top-2 right-2 text-xs italic  '>{category}</p>}
            <div className='h-52 flex justify-center'>
             <img
@@ -41,7 +41,7 @@ function ProductCard({ id, title, price, description, category, image }) {
             className='max-h-52 object-contain'
             />
             </div> 
-            <h4 className='my-3 line-clamp-1 '>{title}</h4>
+            <h4 className='mt-4 line-clamp-1 '>{title}</h4>
             <p className='absolute top-2 right-2 text-xs italic  '>{category}</p>
 
             {isClient && <div className='flex'>
@@ -52,9 +52,9 @@ function ProductCard({ id, title, price, description, category, image }) {
                 })}
             </div>
             }
-            <p className='text-xs my-2 line-clamp-2'>{description}</p>
+            <p className='text-xs my-1 line-clamp-2'>{description}</p>
 
-            <div className='mb-5'>
+            <div className='mb-3'>
                 <Currency quantity={price * 80} currency='INR' ></Currency>
             </div>
 

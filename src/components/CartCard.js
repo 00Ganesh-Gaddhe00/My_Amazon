@@ -30,26 +30,27 @@ function CartCard({id, title, price, description, category, image, rating, hasPr
   }
 
     return (
-    <div className='grid grid-cols-5'>
+    <div className='grid grid-cols-5 items-center'>
      <Image
       src={image}
-      height={200}
-      width={200}
+      height={100}
+      width={100}
       objectFit='contain'
+      className='ml-10'
      />
       {/* middle */}
      <div className='col-span-3 mx-5'>
-        <p>{title}</p>
-        <div className='flex'>
+        <p className='text-sm mt-5'>{title}</p>
+        <div className='flex mt-2'>
             {Array(rating).fill().map((_,i)=>{
-                return <StarIcon key={i} className='h-5 text-yellow-500'></StarIcon>
+                return <StarIcon key={i} className='h-4 text-yellow-500'></StarIcon>
             })}
         </div>
-        <p className='text-xs my-2 line-clamp-3'>{description}</p>
-        <Currency quantity={price*80} currency='INR'></Currency>
+        <p className='text-xs line-clamp-3'>{description}</p>
+        {/* <Currency quantity={price*80} currency='INR'></Currency> */}
         
         { hasPrime && (
-            <div className='flex items-center space-x-2'>
+            <div className='flex items-center space-x-1'>
             <img loading='lazy' className='w-12' src='https://www.datocms-assets.com/22642/1699350082-18.png?h=1000&w=1000' alt='PrimeTag'/>
             <p className='text-xs text-gray-500'>Free Next-day Delivery</p>
             </div>
@@ -57,9 +58,11 @@ function CartCard({id, title, price, description, category, image, rating, hasPr
 
         }
      </div>
-     <div className='flex flex-col space-y-2 justify-self-end'>
-     <button onClick={additemstocart}  className='button mt-auto'> Add to Cart</button>
-     <button onClick={removeItem} className='button mt-auto'> Remove from Cart</button>
+     <div className='flex flex-col space-y-2 text-sm justify-self-end'>
+     <Currency quantity={price*80} currency='INR'></Currency>
+
+     <button onClick={additemstocart}  className='flex items-center justify-center button mt-3 h-8'>Add +1</button>
+     <button onClick={removeItem} className='flex items-center justify-center button mt-auto h-8'> Remove from Cart</button>
 
      </div>
     </div>
