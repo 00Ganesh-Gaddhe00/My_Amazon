@@ -1,0 +1,35 @@
+integrated google authentication using nextauth 
+
+populated products for the store using fakestoreAPI 
+
+achiveved the exact amazon ecomecerce UI using tailwind css
+
+integerated stripe payement gate way with customer with order and customer details
+
+utilized weebhooks for integrating the stripe and firebase inorder to store payment/order details in firebase for later populating in the orders page
+
+_________------------------__________-------___________________----------------_____________________---------
+
+Integrated Google authentication with NextAuth for easy and secure user sign-in.
+
+Populated store products using FakestoreAPI.
+
+Achieved the exact Amazon eCommerce UI design using Tailwind CSS
+
+integerated stripe payement gate way with customer with order and customer details
+
+Utilized webhooks to integrate Stripe with Firebase, storing payment and order details for later display on the orders page.
+
+
+------------------____________________________----------------------------________________________________-----------------------
+
+iceage theme | vscode extension
+
+utlizing the vscode css reference API designed an experimental with a fun and challenge of using only shades of white monotone montone colours and usable, can able to acheive a clean montone usable out of the box looking theme, 
+
+Published the extension on the Visual Studio Code Marketplace using a Microsoft Azure account.
+
+
+
+
+

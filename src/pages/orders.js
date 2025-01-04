@@ -4,8 +4,14 @@ import { getSession, useSession } from 'next-auth/react'
 import moment from 'moment';
 // import { getDocs, limit } from 'firebase/firestore';
 import { collection, doc, getDocs, orderBy, query } from 'firebase/firestore';
-import Order from '../components/Order';
 import db from '../../firebase';
+import dynamic from "next/dynamic";
+
+// Dynamically import Order component
+const Order = dynamic(() => import('../components/Order'), {
+  loading: () => <div className="animate-pulse bg-gray-200 h-[400px] w-full rounded-md"></div>, // Optional: Fallback loading UI
+  ssr: false, // Optional: Disable server-side rendering if needed
+});
 
 function Orders({orders}) {
 
