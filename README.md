@@ -30,6 +30,11 @@ Integrated **Stripe payment gateway** to handle secure customer transactions. Pa
 Utilized **Stripe webhooks** to store customer payments and order details in **Firebase**, which are later displayed on the user's orders page.
 ![Order and Payment Details](./orders.png)
 
+### 6. **Performance Optimization**
+Achieved an exceptional 93% performance score in Lighthouse testing by optimizing the platform for speed, accessibility, and best practices. 
+![Order and Payment Details](./performance.png)
+
+
 ## Technologies Used
 - **Next.js** for server-side rendering and routing
 - **NextAuth** for authentication
