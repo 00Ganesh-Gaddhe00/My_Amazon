@@ -31,8 +31,12 @@ Utilized **Stripe webhooks** to store customer payments and order details in **F
 ![Order and Payment Details](./orders.png)
 
 ### 6. **Performance Optimization**
-Achieved an exceptional 93% performance score in Lighthouse testing by optimizing the platform for speed, accessibility, and best practices. 
-![Order and Payment Details](./performance.png)
+Achieved an exceptional **95% performance score** in Lighthouse, Pagespeed Insights, and GTmetrix testing by optimizing the platform for speed, accessibility, and best practices.
+
+![Performance Optimization](./performance.png)
+![Performance Optimization](./PageSpeedInsight.png)
+![Performance Optimization](./GTmetrics.png)
+
 
 
 ## Technologies Used
